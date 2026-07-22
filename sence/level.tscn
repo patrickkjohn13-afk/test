@@ -1,8 +1,11 @@
 [gd_scene format=4 uid="uid://doutn7cjf1vqp"]
 
 [ext_resource type="Texture2D" uid="uid://c0ngja5u5fgup" path="res://brackeys_platformer_assets/brackeys_platformer_assets/sprites/world_tileset.png" id="1_24cla"]
+[ext_resource type="Script" uid="uid://dyfb3m6xawywa" path="res://sence/level.gd" id="1_geqfj"]
 [ext_resource type="PackedScene" uid="uid://lsv2joembxnt" path="res://player.tscn" id="2_272r5"]
 [ext_resource type="Script" uid="uid://ccvc6uer5552h" path="res://sence/a.gd" id="3_8rvvn"]
+[ext_resource type="PackedScene" uid="uid://mlo4iq34yhd3" path="res://ablle.tscn" id="4_06n7g"]
+[ext_resource type="Script" uid="uid://ce8io6nerc54n" path="res://sence/gamemanger.gd" id="6_aig26"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_272r5"]
 texture = ExtResource("1_24cla")
@@ -268,6 +271,7 @@ sources/0 = SubResource("TileSetAtlasSource_272r5")
 size = Vector2(2520, 24)
 
 [node name="level" type="Node2D" unique_id=366287192]
+script = ExtResource("1_geqfj")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1779591107]
 offset_left = -2449.0
@@ -295,6 +299,19 @@ script = ExtResource("3_8rvvn")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1842362569]
 position = Vector2(1234, 739)
 shape = SubResource("RectangleShape2D_8rvvn")
+
+[node name="Area2D" parent="." unique_id=536694978 instance=ExtResource("4_06n7g")]
+position = Vector2(587, 409)
+
+[node name="gamemanger" type="Node" parent="." unique_id=2044740962]
+script = ExtResource("6_aig26")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=218109196]
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=1790659869]
+offset_left = 1.0
+offset_right = 41.0
+offset_bottom = 23.0
 
 [connection signal="body_entered" from="StaticBody2D" to="StaticBody2D" method="_on_body_entered"]
 [connection signal="child_entered_tree" from="StaticBody2D" to="player" method="_on_static_body_2d_child_entered_tree"]
