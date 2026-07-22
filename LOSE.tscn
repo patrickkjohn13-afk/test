@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://cv6cwiqkquc4t"]
+
+[ext_resource type="FontFile" uid="uid://dtyiy7sieed0g" path="res://JOKERMAN.TTF" id="1_qw3y7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wfsce"]
+bg_color = Color(0.4537487, 0.45374864, 0.45374894, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0, 0, 0, 0.20392157)
+shadow_size = 5
+shadow_offset = Vector2(0, 3.41)
+
+[node name="Control" type="Control" unique_id=62600310]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button2" type="Button" parent="." unique_id=1739920936]
+texture_filter = 1
+layout_mode = 0
+offset_left = 455.0
+offset_top = 538.0
+offset_right = 712.0
+offset_bottom = 604.0
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_qw3y7")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_wfsce")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_wfsce")
+theme_override_styles/hover = SubResource("StyleBoxFlat_wfsce")
+text = "Main Menu"
+
+[node name="Button" type="Button" parent="Button2" unique_id=919988762]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = -1.848
+anchor_right = 0.5
+anchor_bottom = -1.848
+offset_left = -126.5
+offset_top = -0.03199768
+offset_right = 125.5
+offset_bottom = 66.968
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_qw3y7")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_wfsce")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_wfsce")
+theme_override_styles/hover = SubResource("StyleBoxFlat_wfsce")
+text = "RESTART"
+
+[node name="Label" type="Label" parent="." unique_id=2043107597]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = -43.0
+offset_top = 80.0
+offset_right = 43.0
+offset_bottom = 261.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("1_qw3y7")
+theme_override_font_sizes/font_size = 100
+text = "YOU LOSE"
+horizontal_alignment = 1
+vertical_alignment = 1
