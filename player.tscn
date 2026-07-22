@@ -43,19 +43,17 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_dw050"]
-radius = 52.63079
+radius = 39.20459
 
 [node name="player" type="CharacterBody2D" unique_id=1261775121]
 script = ExtResource("1_2hs0m")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=604490525]
 sprite_frames = SubResource("SpriteFrames_11nh2")
-animation = &"jump"
 autoplay = "default"
-frame_progress = 0.76655525
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1310240886]
-position = Vector2(-3, 15)
+position = Vector2(1, 16)
 shape = SubResource("CircleShape2D_dw050")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1411336365]
