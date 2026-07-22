@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://lsv2joembxnt"]
+
+[ext_resource type="Script" uid="uid://bxc3a3huenhm7" path="res://player.gd" id="1_2hs0m"]
+[ext_resource type="Texture2D" uid="uid://shkxg28m8024" path="res://kenney_new-platformer-pack-1.1/Sprites/Characters/Default/character_beige_front.png" id="1_onrkg"]
+[ext_resource type="Texture2D" uid="uid://bpgfev5m56e4u" path="res://kenney_new-platformer-pack-1.1/Sprites/Characters/Default/character_beige_idle.png" id="2_i3pqv"]
+[ext_resource type="Texture2D" uid="uid://pvrqwkw6yqtj" path="res://kenney_new-platformer-pack-1.1/Sprites/Characters/Default/character_beige_jump.png" id="3_sweqy"]
+[ext_resource type="Texture2D" uid="uid://cfxhl0yvcukfx" path="res://kenney_new-platformer-pack-1.1/Sprites/Characters/Default/character_beige_walk_a.png" id="4_2hs0m"]
+[ext_resource type="Texture2D" uid="uid://byb57w0tkcpyn" path="res://kenney_new-platformer-pack-1.1/Sprites/Characters/Default/character_beige_walk_b.png" id="5_1jxqw"]
+[ext_resource type="AudioStream" uid="uid://cn18gd1cn0cca" path="res://brackeys_platformer_assets/brackeys_platformer_assets/sounds/jump.wav" id="7_1jxqw"]
+[ext_resource type="AudioStream" uid="uid://bl4jf300q7sae" path="res://kenney_new-platformer-pack-1.1/Sounds/sfx_jump.ogg" id="8_dw050"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_11nh2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_onrkg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_i3pqv")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_sweqy")
+}],
+"loop": 1,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_2hs0m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_1jxqw")
+}],
+"loop": 1,
+"name": &"run",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dw050"]
+radius = 52.63079
+
+[node name="player" type="CharacterBody2D" unique_id=1261775121]
+script = ExtResource("1_2hs0m")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=604490525]
+sprite_frames = SubResource("SpriteFrames_11nh2")
+animation = &"jump"
+autoplay = "default"
+frame_progress = 0.76655525
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1310240886]
+position = Vector2(-3, 15)
+shape = SubResource("CircleShape2D_dw050")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1411336365]
+stream = ExtResource("7_1jxqw")
+playback_type = 1
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="." unique_id=92424863]
+stream = ExtResource("8_dw050")
+playback_type = 1
