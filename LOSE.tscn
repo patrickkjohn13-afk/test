@@ -1,10 +1,21 @@
-[gd_scene format=3 uid="uid://cv6cwiqkquc4t"]
+[gd_scene format=3 uid="uid://b6gud31x04c0d"]
 
+[ext_resource type="FontFile" uid="uid://dtyiy7sieed0g" path="res://JOKERMAN.TTF" id="1_qw3y7"]
 [ext_resource type="Script" uid="uid://c1ogtcqyji7ik" path="res://lose.gd" id="1_rtc1j"]
 [ext_resource type="Texture2D" uid="uid://c81y7yjwfuuft" path="res://لقطة شاشة 2026-07-23 002725.png" id="2_pl8j0"]
 [ext_resource type="AudioStream" uid="uid://bu6v40crj3nux" path="res://Gone Away - Blue Beat Review.mp3" id="3_46blr"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rtc1j"]
+bg_color = Color(0.4537487, 0.45374864, 0.45374894, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0, 0, 0, 0.20392157)
+shadow_size = 5
+shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ag1i6"]
 bg_color = Color(0.4537487, 0.45374864, 0.45374894, 1)
 corner_radius_top_left = 16
 corner_radius_top_right = 16
@@ -41,22 +52,60 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -138.5
-offset_top = -21.0
-offset_right = 138.5
-offset_bottom = 21.0
+offset_left = -159.0
+offset_top = -16.0
+offset_right = 136.0
+offset_bottom = 26.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_qw3y7")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_rtc1j")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_rtc1j")
 theme_override_styles/hover = SubResource("StyleBoxFlat_rtc1j")
-text = "main"
+text = "MAIN MENU"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=830356127]
 stream = ExtResource("3_46blr")
 autoplay = true
+
+[node name="Label" type="Label" parent="." unique_id=1165013794]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = -3.0
+offset_top = 1.0
+offset_right = -3.0
+offset_bottom = 56.5
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("1_qw3y7")
+theme_override_font_sizes/font_size = 100
+text = "YOU LOSE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button4" type="Button" parent="Label" unique_id=1649554729]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 401.0
+offset_top = 244.0
+offset_right = -412.0
+offset_bottom = 286.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_qw3y7")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_ag1i6")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ag1i6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ag1i6")
+text = "RESTART"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
