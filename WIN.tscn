@@ -109,3 +109,4 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_ag1i6")
 text = "NEXT LEVEL"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Label/Button4" to="." method="_on_button_4_pressed"]
