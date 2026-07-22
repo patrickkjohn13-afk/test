@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://c0ngja5u5fgup" path="res://brackeys_platformer_assets/brackeys_platformer_assets/sprites/world_tileset.png" id="1_24cla"]
 [ext_resource type="PackedScene" uid="uid://lsv2joembxnt" path="res://player.tscn" id="2_272r5"]
+[ext_resource type="Script" uid="uid://c3m86asytgfhv" path="res://sence/static_body_2d.gd" id="3_8rvvn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_272r5"]
 texture = ExtResource("1_24cla")
@@ -263,7 +264,8 @@ texture = ExtResource("1_24cla")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_272r5")
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_8rvvn"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8rvvn"]
+size = Vector2(2520, 24)
 
 [node name="level" type="Node2D" unique_id=366287192]
 
@@ -287,7 +289,10 @@ position_smoothing_enabled = true
 position_smoothing_speed = 10.0
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1581941764]
+script = ExtResource("3_8rvvn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1842362569]
-position = Vector2(1169, 685)
-shape = SubResource("WorldBoundaryShape2D_8rvvn")
+position = Vector2(1234, 739)
+shape = SubResource("RectangleShape2D_8rvvn")
+
+[connection signal="child_entered_tree" from="StaticBody2D" to="StaticBody2D" method="_on_child_entered_tree"]
