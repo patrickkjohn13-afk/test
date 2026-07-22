@@ -109,6 +109,6 @@ texture_filter = 1
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_11nh2")
 autoplay = "default"
-frame_progress = 0.5087399
+frame_progress = 0.9396032
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

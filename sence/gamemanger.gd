@@ -17,4 +17,4 @@ func apple_collected():
 	apples_left -= 1
 
 	if apples_left <= 0:
-		get_tree().change_scene_to_file("res://LOSE.tscn")
+		get_tree().change_scene_to_file("res://WIN.tscn")

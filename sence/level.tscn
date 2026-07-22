@@ -97,6 +97,7 @@ texture = ExtResource("1_24cla")
 9:3/0 = 0
 9:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 0:4/0 = 0
+0:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:4/0 = 0
 1:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:4/0 = 0
@@ -116,6 +117,7 @@ texture = ExtResource("1_24cla")
 9:4/0 = 0
 9:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 0:5/0 = 0
+0:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:5/0 = 0
 1:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:5/0 = 0
@@ -304,6 +306,7 @@ shape = SubResource("RectangleShape2D_8rvvn")
 position = Vector2(587, 409)
 
 [node name="gamemanger" type="Node" parent="." unique_id=2044740962]
+unique_name_in_owner = true
 script = ExtResource("6_aig26")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=218109196]
@@ -312,6 +315,9 @@ script = ExtResource("6_aig26")
 offset_left = 1.0
 offset_right = 41.0
 offset_bottom = 23.0
+
+[node name="Area2D2" parent="." unique_id=1930187138 instance=ExtResource("4_06n7g")]
+position = Vector2(969, 552)
 
 [connection signal="body_entered" from="StaticBody2D" to="StaticBody2D" method="_on_body_entered"]
 [connection signal="child_entered_tree" from="StaticBody2D" to="player" method="_on_static_body_2d_child_entered_tree"]
