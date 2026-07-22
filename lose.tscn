@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://b6gud31x04c0d"]
+[gd_scene format=3 uid="uid://b2eyowfmuambu"]
 
 [ext_resource type="FontFile" uid="uid://dtyiy7sieed0g" path="res://JOKERMAN.TTF" id="1_qw3y7"]
 [ext_resource type="Script" uid="uid://c1ogtcqyji7ik" path="res://lose.gd" id="1_rtc1j"]
@@ -109,3 +109,4 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_ag1i6")
 text = "RESTART"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Label/Button4" to="." method="_on_button_4_pressed"]
