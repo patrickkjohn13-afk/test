@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c1ogtcqyji7ik" path="res://lose.gd" id="1_rtc1j"]
 [ext_resource type="Texture2D" uid="uid://c81y7yjwfuuft" path="res://لقطة شاشة 2026-07-23 002725.png" id="2_pl8j0"]
+[ext_resource type="AudioStream" uid="uid://bu6v40crj3nux" path="res://Gone Away - Blue Beat Review.mp3" id="3_46blr"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rtc1j"]
 bg_color = Color(0.4537487, 0.45374864, 0.45374894, 1)
@@ -53,5 +54,9 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_rtc1j")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_rtc1j")
 theme_override_styles/hover = SubResource("StyleBoxFlat_rtc1j")
 text = "main"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=830356127]
+stream = ExtResource("3_46blr")
+autoplay = true
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
