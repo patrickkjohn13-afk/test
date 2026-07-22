@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bu6v40crj3nux"
+path="res://.godot/imported/Gone Away - Blue Beat Review.mp3-aa445f8c3bc2e7a815ed5c6ba2a11a05.mp3str"
+
+[deps]
+
+source_file="res://Gone Away - Blue Beat Review.mp3"
+dest_files=["res://.godot/imported/Gone Away - Blue Beat Review.mp3-aa445f8c3bc2e7a815ed5c6ba2a11a05.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

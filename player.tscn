@@ -60,6 +60,7 @@ shape = SubResource("CircleShape2D_dw050")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1411336365]
 stream = ExtResource("7_1jxqw")
+bus = &"sfx"
 playback_type = 1
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="." unique_id=92424863]
