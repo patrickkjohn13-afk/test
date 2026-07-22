@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://c0ngja5u5fgup" path="res://brackeys_platformer_assets/brackeys_platformer_assets/sprites/world_tileset.png" id="1_24cla"]
 [ext_resource type="PackedScene" uid="uid://lsv2joembxnt" path="res://player.tscn" id="2_272r5"]
-[ext_resource type="Script" uid="uid://c3m86asytgfhv" path="res://sence/static_body_2d.gd" id="3_8rvvn"]
+[ext_resource type="Script" uid="uid://ccvc6uer5552h" path="res://sence/a.gd" id="3_8rvvn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_272r5"]
 texture = ExtResource("1_24cla")
@@ -288,11 +288,14 @@ position = Vector2(91, 516)
 position_smoothing_enabled = true
 position_smoothing_speed = 10.0
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1581941764]
+[node name="StaticBody2D" type="Area2D" parent="." unique_id=115778911]
+position = Vector2(-5, 89)
 script = ExtResource("3_8rvvn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1842362569]
 position = Vector2(1234, 739)
 shape = SubResource("RectangleShape2D_8rvvn")
 
+[connection signal="body_entered" from="StaticBody2D" to="StaticBody2D" method="_on_body_entered"]
+[connection signal="child_entered_tree" from="StaticBody2D" to="player" method="_on_static_body_2d_child_entered_tree"]
 [connection signal="child_entered_tree" from="StaticBody2D" to="StaticBody2D" method="_on_child_entered_tree"]
