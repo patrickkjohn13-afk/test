@@ -3,8 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://c0ngja5u5fgup" path="res://brackeys_platformer_assets/brackeys_platformer_assets/sprites/world_tileset.png" id="1_24cla"]
 [ext_resource type="Script" uid="uid://dyfb3m6xawywa" path="res://sence/level.gd" id="1_geqfj"]
 [ext_resource type="PackedScene" uid="uid://lsv2joembxnt" path="res://player.tscn" id="2_272r5"]
-[ext_resource type="Script" uid="uid://ccvc6uer5552h" path="res://sence/a.gd" id="3_8rvvn"]
 [ext_resource type="PackedScene" uid="uid://mlo4iq34yhd3" path="res://ablle.tscn" id="4_06n7g"]
+[ext_resource type="Script" uid="uid://bltj3y7e4muaw" path="res://sence/static_body_2d2.gd" id="5_ikms2"]
 [ext_resource type="Script" uid="uid://ce8io6nerc54n" path="res://sence/gamemanger.gd" id="6_aig26"]
 [ext_resource type="AudioStream" uid="uid://dbmr47ex8im2k" path="res://kenney_new-platformer-pack-1.1/Sounds/sfx_coin.ogg" id="7_ing3c"]
 [ext_resource type="PackedScene" uid="uid://qgrpemyxnnks" path="res://enmy.tscn" id="8_ikms2"]
@@ -304,7 +304,7 @@ position_smoothing_speed = 10.0
 
 [node name="StaticBody2D" type="Area2D" parent="." unique_id=115778911]
 position = Vector2(-5, 89)
-script = ExtResource("3_8rvvn")
+script = ExtResource("5_ikms2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1842362569]
 position = Vector2(1234, 739)

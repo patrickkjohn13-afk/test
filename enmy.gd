@@ -41,4 +41,4 @@ func _on_head_body_shape_entered(body_rid: RID, body: Node2D, body_shape_index: 
 
 func _on_body_body_entered(body: Node2D) -> void:
 	if (body.name == "player"):
-		print("damge")
+		get_tree().reload_current_scene()
