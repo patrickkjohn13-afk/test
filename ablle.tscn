@@ -2,9 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://c0exb207h2vnt" path="res://brackeys_platformer_assets/brackeys_platformer_assets/sprites/coin.png" id="1_gq5mm"]
 [ext_resource type="Script" uid="uid://ccvc6uer5552h" path="res://sence/a.gd" id="1_wngw2"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_gq5mm"]
-radius = 31.0
+[ext_resource type="AudioStream" uid="uid://dbmr47ex8im2k" path="res://kenney_new-platformer-pack-1.1/Sounds/sfx_coin.ogg" id="3_ogw1w"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gq5mm"]
 atlas = ExtResource("1_gq5mm")
@@ -98,11 +96,11 @@ animations = [{
 "speed": 20.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_gq5mm"]
+radius = 31.0
+
 [node name="Area2D" type="Area2D" unique_id=536694978 groups=["apple"]]
 script = ExtResource("1_wngw2")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=921970475]
-shape = SubResource("CircleShape2D_gq5mm")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1414796265]
 texture_filter = 1
@@ -110,5 +108,11 @@ scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_11nh2")
 autoplay = "default"
 frame_progress = 0.9396032
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=921970475]
+shape = SubResource("CircleShape2D_gq5mm")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1714796949]
+stream = ExtResource("3_ogw1w")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

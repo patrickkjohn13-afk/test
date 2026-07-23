@@ -6,6 +6,8 @@
 [ext_resource type="Script" uid="uid://ccvc6uer5552h" path="res://sence/a.gd" id="3_8rvvn"]
 [ext_resource type="PackedScene" uid="uid://mlo4iq34yhd3" path="res://ablle.tscn" id="4_06n7g"]
 [ext_resource type="Script" uid="uid://ce8io6nerc54n" path="res://sence/gamemanger.gd" id="6_aig26"]
+[ext_resource type="AudioStream" uid="uid://dbmr47ex8im2k" path="res://kenney_new-platformer-pack-1.1/Sounds/sfx_coin.ogg" id="7_ing3c"]
+[ext_resource type="PackedScene" uid="uid://qgrpemyxnnks" path="res://enmy.tscn" id="8_ikms2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_272r5"]
 texture = ExtResource("1_24cla")
@@ -287,6 +289,12 @@ scale = Vector2(3, 3)
 tile_map_data = PackedByteArray("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")
 tile_set = SubResource("TileSet_pa8u8")
 
+[node name="Area2D" parent="." unique_id=536694978 instance=ExtResource("4_06n7g")]
+position = Vector2(587, 409)
+
+[node name="Area2D2" parent="." unique_id=1930187138 instance=ExtResource("4_06n7g")]
+position = Vector2(969, 552)
+
 [node name="player" parent="." unique_id=1261775121 instance=ExtResource("2_272r5")]
 position = Vector2(91, 516)
 
@@ -302,22 +310,32 @@ script = ExtResource("3_8rvvn")
 position = Vector2(1234, 739)
 shape = SubResource("RectangleShape2D_8rvvn")
 
-[node name="Area2D" parent="." unique_id=536694978 instance=ExtResource("4_06n7g")]
-position = Vector2(587, 409)
-
 [node name="gamemanger" type="Node" parent="." unique_id=2044740962]
 unique_name_in_owner = true
 script = ExtResource("6_aig26")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=218109196]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="gamemanger" unique_id=1212393760]
+stream = ExtResource("7_ing3c")
 
-[node name="Label" type="Label" parent="CanvasLayer" unique_id=1790659869]
+[node name="Label" type="Label" parent="gamemanger" unique_id=927798535]
 offset_left = 1.0
 offset_right = 41.0
 offset_bottom = 23.0
+text = "lives :"
 
-[node name="Area2D2" parent="." unique_id=1930187138 instance=ExtResource("4_06n7g")]
-position = Vector2(969, 552)
+[node name="CharacterBody2D" parent="gamemanger" unique_id=151789899 instance=ExtResource("8_ikms2")]
+position = Vector2(888, 547)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=218109196]
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=1790659869]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -67.0
+offset_bottom = 23.0
+grow_horizontal = 0
+text = "points :0"
 
 [connection signal="body_entered" from="StaticBody2D" to="StaticBody2D" method="_on_body_entered"]
 [connection signal="child_entered_tree" from="StaticBody2D" to="player" method="_on_static_body_2d_child_entered_tree"]

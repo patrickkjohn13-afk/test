@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://dg64qb0yrt6jk" path="res://sence/main.gd" id="1_bd3hy"]
 [ext_resource type="FontFile" uid="uid://dtyiy7sieed0g" path="res://JOKERMAN.TTF" id="2_4vsvb"]
 [ext_resource type="Script" uid="uid://c3haj31tquufc" path="res://sence/h_slider.gd" id="2_sb8i5"]
-[ext_resource type="AudioStream" uid="uid://bu6v40crj3nux" path="res://Gone Away - Blue Beat Review.mp3" id="3_77o7s"]
+[ext_resource type="AudioStream" uid="uid://dr8hc5tjbvfwx" path="res://brackeys_platformer_assets/brackeys_platformer_assets/music/time_for_adventure.mp3" id="4_4vsvb"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vhfbf"]
 bg_color = Color(0.4537487, 0.45374864, 0.45374894, 1)
@@ -160,7 +160,7 @@ theme_override_styles/grabber_area_highlight = SubResource("StyleBoxLine_sb8i5")
 script = ExtResource("2_sb8i5")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1736009191]
-stream = ExtResource("3_77o7s")
+stream = ExtResource("4_4vsvb")
 autoplay = true
 
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]

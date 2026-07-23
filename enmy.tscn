@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://qgrpemyxnnks"]
+
+[ext_resource type="Script" uid="uid://cham88b2x7qhu" path="res://enmy.gd" id="1_bi13e"]
+[ext_resource type="Texture2D" uid="uid://bclicijj42xe2" path="res://kenney_new-platformer-pack-1.1/Sprites/Enemies/Default/ladybug_walk_b.png" id="1_qarqu"]
+[ext_resource type="Texture2D" uid="uid://dk4hngwgbboob" path="res://kenney_new-platformer-pack-1.1/Sprites/Enemies/Default/ladybug_walk_a.png" id="2_bi13e"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yxbhl"]
+atlas = ExtResource("1_qarqu")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eoudk"]
+atlas = ExtResource("2_bi13e")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_11nh2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yxbhl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eoudk")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_awp2b"]
+size = Vector2(61, 30)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_11nh2"]
+size = Vector2(61.5, 18.5)
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=151789899]
+script = ExtResource("1_bi13e")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=954882743]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_11nh2")
+autoplay = "default"
+frame_progress = 0.09915857
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1079784509]
+position = Vector2(2.5, 15)
+shape = SubResource("RectangleShape2D_awp2b")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=231676075]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1423640466]
+position = Vector2(1.75, -8.75)
+shape = SubResource("RectangleShape2D_11nh2")
+
+[node name="FloorRay" type="RayCast2D" parent="." unique_id=430155951]
+position = Vector2(0, 30)
+target_position = Vector2(-35, 0)
+collision_mask = 4
+
+[node name="FloorRay2" type="RayCast2D" parent="." unique_id=83369460]
+position = Vector2(0, 30)
+target_position = Vector2(0, 0.2)
+collision_mask = 4

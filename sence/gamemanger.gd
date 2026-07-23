@@ -17,4 +17,6 @@ func apple_collected():
 	apples_left -= 1
 
 	if apples_left <= 0:
+		$AudioStreamPlayer.play()
+		await $AudioStreamPlayer.finished
 		get_tree().change_scene_to_file("res://WIN.tscn")
