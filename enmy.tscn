@@ -57,6 +57,9 @@ target_position = Vector2(-35, 0)
 collision_mask = 4
 
 [node name="FloorRay2" type="RayCast2D" parent="." unique_id=83369460]
-position = Vector2(0, 30)
-target_position = Vector2(0, 0.2)
-collision_mask = 4
+position = Vector2(-32, 15)
+target_position = Vector2(0, 22)
+
+[node name="FloorRay3" type="RayCast2D" parent="." unique_id=1876128028]
+position = Vector2(37, 15)
+target_position = Vector2(0, 22)
