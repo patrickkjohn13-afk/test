@@ -36,10 +36,4 @@ func _physics_process(delta: float) -> void:
 
 	var isleft = velocity.x < 0 
 	sprite_2D.flip_h = isleft
-	
-func take_damage():
-	hearts -= 1
-	print("القلوب: ", hearts)
-
-	if hearts <= 0:
-		queue_free() # أو أعد تشغيل المرحلة
+# أو أعد تشغيل المرحلة

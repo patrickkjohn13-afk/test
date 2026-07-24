@@ -8,6 +8,7 @@
 [ext_resource type="Script" uid="uid://ce8io6nerc54n" path="res://sence/gamemanger.gd" id="6_aig26"]
 [ext_resource type="AudioStream" uid="uid://dbmr47ex8im2k" path="res://kenney_new-platformer-pack-1.1/Sounds/sfx_coin.ogg" id="7_ing3c"]
 [ext_resource type="PackedScene" uid="uid://qgrpemyxnnks" path="res://enmy.tscn" id="8_ikms2"]
+[ext_resource type="Texture2D" uid="uid://byyxnxm7esfaj" path="res://kenney_new-platformer-pack-1.1/Sprites/Tiles/Default/coin_gold.png" id="9_mkptv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_272r5"]
 texture = ExtResource("1_24cla")
@@ -310,18 +311,13 @@ script = ExtResource("5_ikms2")
 position = Vector2(1234, 739)
 shape = SubResource("RectangleShape2D_8rvvn")
 
-[node name="gamemanger" type="Node" parent="." unique_id=2044740962]
+[node name="gamemanger" type="Node" parent="." unique_id=2044740962 node_paths=PackedStringArray("hreart")]
 unique_name_in_owner = true
 script = ExtResource("6_aig26")
+hreart = [NodePath("../CanvasLayer2/HBoxContainer/haert1"), NodePath("../CanvasLayer2/HBoxContainer/heart2"), NodePath("../CanvasLayer2/HBoxContainer/haer3")]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="gamemanger" unique_id=1212393760]
 stream = ExtResource("7_ing3c")
-
-[node name="Label" type="Label" parent="gamemanger" unique_id=927798535]
-offset_left = 1.0
-offset_right = 41.0
-offset_bottom = 23.0
-text = "lives :"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=218109196]
 
@@ -336,6 +332,24 @@ text = "points :0"
 
 [node name="CharacterBody2D" parent="." unique_id=151789899 instance=ExtResource("8_ikms2")]
 position = Vector2(1315, 485)
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=226417279]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer2" unique_id=321258438]
+offset_right = 200.0
+offset_bottom = 64.0
+
+[node name="haert1" type="TextureRect" parent="CanvasLayer2/HBoxContainer" unique_id=869741849]
+layout_mode = 2
+texture = ExtResource("9_mkptv")
+
+[node name="heart2" type="TextureRect" parent="CanvasLayer2/HBoxContainer" unique_id=1921133501]
+layout_mode = 2
+texture = ExtResource("9_mkptv")
+
+[node name="haer3" type="TextureRect" parent="CanvasLayer2/HBoxContainer" unique_id=930912954]
+layout_mode = 2
+texture = ExtResource("9_mkptv")
 
 [connection signal="body_entered" from="StaticBody2D" to="StaticBody2D" method="_on_body_entered"]
 [connection signal="child_entered_tree" from="StaticBody2D" to="player" method="_on_static_body_2d_child_entered_tree"]

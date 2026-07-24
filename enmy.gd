@@ -1,4 +1,5 @@
 extends CharacterBody2D
+@onready var gamemanger: Node = %gamemanger
 
 @export var speed := 50.0
 var direction := 1
@@ -36,7 +37,8 @@ func _physics_process(delta):
 
 func _on_body_body_entered(body: Node2D) -> void:
 	if (body.name == "player"):
-		get_tree().reload_current_scene()
+				body.velocity.x = -500  # يجعل اللاعب يرتد للأعلى
+				gamemanger.halth()
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:

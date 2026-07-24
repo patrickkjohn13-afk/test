@@ -1,10 +1,28 @@
 extends Node
+var hearts = 3
+
 
 @onready var label: Label = $"../CanvasLayer/Label"
 @onready var dialog = $"../AcceptDialog"
+@export var hreart : Array[Node]
+
 
 var points = 0
 var apples_left = 0
+
+func halth():
+	hearts -= 1
+	for h in 3:
+		if (h< hearts):
+			hreart[h].show()
+		else :
+			hreart[h].hide()
+
+			
+			
+	print(hearts)
+	if (hearts == 0):
+		get_tree().reload_current_scene()
 
 func _ready():
 	apples_left = get_tree().get_nodes_in_group("apple").size()
