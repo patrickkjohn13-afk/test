@@ -1,9 +1,8 @@
 [gd_scene format=3 uid="uid://bsap52lmtqqs2"]
 
-[ext_resource type="Script" uid="uid://c1ogtcqyji7ik" path="res://lose.gd" id="1_acyep"]
+[ext_resource type="Script" uid="uid://bibxi6e2wnpyt" path="res://win.gd" id="1_acyep"]
 [ext_resource type="Texture2D" uid="uid://c81y7yjwfuuft" path="res://لقطة شاشة 2026-07-23 002725.png" id="2_b87xu"]
 [ext_resource type="FontFile" uid="uid://dtyiy7sieed0g" path="res://JOKERMAN.TTF" id="3_7t8k0"]
-[ext_resource type="AudioStream" uid="uid://bu6v40crj3nux" path="res://Gone Away - Blue Beat Review.mp3" id="4_6mrea"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rtc1j"]
 bg_color = Color(0.4537487, 0.45374864, 0.45374894, 1)
@@ -40,6 +39,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 80.0
+offset_top = 5.0
+offset_right = 80.0
+offset_bottom = 5.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_b87xu")
@@ -66,10 +69,6 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_rtc1j")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_rtc1j")
 theme_override_styles/hover = SubResource("StyleBoxFlat_rtc1j")
 text = "MAIN MENU"
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=830356127]
-stream = ExtResource("4_6mrea")
-autoplay = true
 
 [node name="Label" type="Label" parent="." unique_id=1165013794]
 layout_mode = 1
