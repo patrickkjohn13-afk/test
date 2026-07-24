@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://doutn7cjf1vqp"]
+[gd_scene format=4 uid="uid://r0kypo5jaldp"]
 
 [ext_resource type="Texture2D" uid="uid://c0ngja5u5fgup" path="res://brackeys_platformer_assets/brackeys_platformer_assets/sprites/world_tileset.png" id="1_24cla"]
 [ext_resource type="Script" uid="uid://dyfb3m6xawywa" path="res://sence/level.gd" id="1_geqfj"]
@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://mlo4iq34yhd3" path="res://ablle.tscn" id="4_06n7g"]
 [ext_resource type="Script" uid="uid://bltj3y7e4muaw" path="res://sence/static_body_2d2.gd" id="5_ikms2"]
 [ext_resource type="Script" uid="uid://ce8io6nerc54n" path="res://sence/gamemanger.gd" id="6_aig26"]
-[ext_resource type="AudioStream" uid="uid://dbmr47ex8im2k" path="res://kenney_new-platformer-pack-1.1/Sounds/sfx_coin.ogg" id="7_ing3c"]
 [ext_resource type="PackedScene" uid="uid://qgrpemyxnnks" path="res://enmy.tscn" id="8_ikms2"]
 [ext_resource type="Texture2D" uid="uid://byyxnxm7esfaj" path="res://kenney_new-platformer-pack-1.1/Sprites/Tiles/Default/coin_gold.png" id="9_mkptv"]
 
@@ -278,6 +277,11 @@ size = Vector2(2520, 24)
 [node name="level" type="Node2D" unique_id=366287192]
 script = ExtResource("1_geqfj")
 
+[node name="gamemanger" type="Node" parent="." unique_id=2044740962 node_paths=PackedStringArray("hreart")]
+unique_name_in_owner = true
+script = ExtResource("6_aig26")
+hreart = [NodePath("../CanvasLayer2/HBoxContainer/haert1"), NodePath("../CanvasLayer2/HBoxContainer/heart2"), NodePath("../CanvasLayer2/HBoxContainer/haer3")]
+
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1779591107]
 offset_left = -2449.0
 offset_right = 6.0
@@ -310,14 +314,6 @@ script = ExtResource("5_ikms2")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1842362569]
 position = Vector2(1234, 739)
 shape = SubResource("RectangleShape2D_8rvvn")
-
-[node name="gamemanger" type="Node" parent="." unique_id=2044740962 node_paths=PackedStringArray("hreart")]
-unique_name_in_owner = true
-script = ExtResource("6_aig26")
-hreart = [NodePath("../CanvasLayer2/HBoxContainer/haert1"), NodePath("../CanvasLayer2/HBoxContainer/heart2"), NodePath("../CanvasLayer2/HBoxContainer/haer3")]
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="gamemanger" unique_id=1212393760]
-stream = ExtResource("7_ing3c")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=218109196]
 

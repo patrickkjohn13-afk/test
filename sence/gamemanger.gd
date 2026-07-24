@@ -12,14 +12,14 @@ var apples_left = 0
 
 func halth():
 	hearts -= 1
-	print(hearts)
 	if (hearts == 0):
-		call_deferred("_lose")
+		get_tree().change_scene_to_file("res://LOSE.tscn")
 	for h in 3:
 		if (h< hearts):
 			hreart[h].show()
 		else :
 			hreart[h].hide()
+
 func _ready():
 	apples_left = get_tree().get_nodes_in_group("apple").size()
 
@@ -32,8 +32,3 @@ func apple_collected():
 
 	if apples_left <= 0:
 		get_tree().change_scene_to_file("res://WIN.tscn")
-		
-
-
-func _lose():
-	get_tree().change_scene_to_file("res://LOSE.tscn")
